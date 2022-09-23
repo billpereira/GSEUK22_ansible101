@@ -38,4 +38,6 @@ echo '        LANG: "C"' >> inventory.yaml
 
 sudo apt-get install sshpass -y
 
+pip install ansible
+
 exit
