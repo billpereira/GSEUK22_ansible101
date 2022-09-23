@@ -8,7 +8,6 @@ python --version
 pip --version
 
 sudo apt-get install ansible -y
-sudo apt-get install sshpass -y
 
 ansible --version
 
@@ -36,5 +35,7 @@ echo '        _TAG_REDIR_IN: "txt"' >> inventory.yaml
 echo '        _TAG_REDIR_OUT: "txt"' >> inventory.yaml
 echo '        _CC_LIB_PREFIX: "SYS1"' >> inventory.yaml
 echo '        LANG: "C"' >> inventory.yaml
+
+sudo apt-get install sshpass -y
 
 exit
