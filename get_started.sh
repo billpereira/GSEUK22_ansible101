@@ -37,6 +37,4 @@ echo '        _TAG_REDIR_OUT: "txt"' >> inventory.yaml
 echo '        _CC_LIB_PREFIX: "SYS1"' >> inventory.yaml
 echo '        LANG: "C"' >> inventory.yaml
 
-ansible-playbook ping.yaml -i inventory.yaml 
-
 exit
