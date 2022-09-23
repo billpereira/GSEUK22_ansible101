@@ -1,7 +1,15 @@
 # GSEUK22_ansible101
 Repository for Ansible 101 course with hands on activities
 
-## Infra as a Code approach
+## Infra as Code approach
+
+Usually our changes to infrastructure has to happen out of business hours, is common to have complex tasks to be executed on weekend evenings. Looking for an automated process where we can avoid human errors we map our activities, the configuration, our infrastructure.
+
+The coding of our infrastructure will be the input of the automation tool we use, in this case we will have Ansible as our tool.
+
+There are 2 types of IaC, declaratve and imperative. 
+
+The declarative approach
 
 ## Quick introduction to Ansible engines
 
@@ -78,3 +86,49 @@ zxplore | SUCCESS => {
     "ping": "pong"
 }
 ```
+
+## Ansible Playbooks
+
+### YAML - YAML ain't markup language
+
+So now you are probably asking how do we provide these instructions for Ansible, how we provide these data?
+
+The language we use is the YAML, that stands for YAML Ain't Markup Language, it's a data serialization language often used for writing configuration files.
+
+Let's take a look on how we can get started with YAML files. One of the things that is very common is to have pairs `key: value`.
+
+```
+key: value
+name: Tony
+age: 35
+date: 13-07-2022
+member_of_gse: true
+```
+
+One important thing about YAML files, it's oriented by identation, so let's look other example:
+
+```
+gse_member:
+  name: Tony
+  start_date: 13-07-2022
+  talk: Zowe
+```
+
+Now when we use the identation, we transformed all those keys(name, start_date, speciality) into properties of gis_team_member, this is similar to when we add a object as property of a key in JSON.
+
+If we need to represent a list of team members on this YAML, all we need is make use of `-` and the identation
+
+```
+gis_team_member:
+  - name: Tony
+    start_date: 13-07-2022
+    talk: Zowe
+
+  - name: Sylvia
+    start_date: 1-06-2021
+    talk: DB2
+```
+
+This gives a basic understanding for us to continue, but more detailed documentation can be found on:
+
+https://yaml.org/spec/1.2.2/
