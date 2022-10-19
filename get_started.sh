@@ -44,6 +44,7 @@ pip install "ansible-lint"
 code --install-extension Zowe.vscode-extension-for-zowe
 code --install-extension oderwat.indent-rainbow
 code --install-extension redhat.ansible
+code --install-extension zbillpereira.ansiblezsnippets2
 
 # ansible --version
 
