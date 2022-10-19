@@ -1,0 +1,9 @@
+//JCL14   JOB 1
+//***************************************************/
+//HELLO   EXEC PGM=IEFBR14
+{% for dataset in datasets_to_be_allocated %}
+//{{dataset.ddname}}  DD DSN={{dataset.dsname}},
+//      DISP=(NEW,CATLG),
+//      UNIT=SYSALLDA,
+//      SPACE=(TRK,1)
+{% endfor %}

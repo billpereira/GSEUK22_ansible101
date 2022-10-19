@@ -1,0 +1,39 @@
+S0W1      2022292  04:18:29.55             ISF031I CONSOLE Z12309 ACTIVATED
+S0W1      2022292  04:18:29.55            -D A,L
+S0W1      2022292  04:18:29.55             CNZ4105I 04.18.29 DISPLAY ACTIVITY 290
+                                            JOBS     M/S    TS USERS    SYSAS    INITS   ACTIVE/MAX VTAM     OAS
+                                           00031    00031    00009      00034    00061    00001/02000       00067
+                                            LLA      LLA      LLA      NSW  S  HZR      HZR      IEFPROC  NSW  S
+                                            JES2     JES2     IEFPROC  NSW  S  VLF      VLF      VLF      NSW  S
+                                            SDSF     SDSF     SDSF     NSW  S  EPWFFST  FFST     EPWFFST  NSW  S
+                                            HZSPROC  HZSPROC  HZSSTEP  NSW  SO VTAM     VTAM     VTAM     NSW  S
+                                            RRS      RRS      RRS      NSW  S  OAM      OAM      IEFPROC  NSW  S
+                                            RACF     RACF     RACF     NSW  S  SDSFAUX  SDSFAUX  SDSFAUX  NSW  S
+                                            SSHD     SSHD     *OMVSEX  OWT  SO DBCGMSTR DBCGMSTR IEFPROC  NSW  S
+                                            ZWESISTC ZWESISTC ZWESIS01 NSW  SO PAGENT   PAGENT   PAGENT   OWT  SO
+                                            CICSTS55 CICSTS55 CICS     NSW  SO ZOSCAGL  ZOSCAGL  ZCONNECT NSW  SO
+                                            ZOSCSRV  ZOSCSRV  ZCONNECT IN   SO CSQ9MSTR CSQ9MSTR PROCSTEP NSW  S
+                                            TCPIP    TCPIP    TCPIP    NSW  SO TN3270   TN3270   TN3270   NSW  SO
+                                            CSF      CSF      CSF      NSW  S  TCAS     TCAS     TCAS     OWT  S
+                                            DBCGIRLM DBCGIRLM          NSW  S  DBCGDBM1 DBCGDBM1 IEFPROC  NSW  S
+                                            DBCGDIST DBCGDIST IEFPROC  NSW  SO FTPSERVE STEP1    TCPIP    OWT  AO
+                                            DBCGADMT DBCGADMT STARTADM IN   SO IZUANG1  IZUANG1  STEP1    NSW  SO
+                                            IZUSVR1  IZUSVR1  ZOSMF    IN   SO ZWESLSTC ZWESLSTC ZWELNCH  IN   SO
+                                            ZWESLSTC STEP1    STCOPER  IN   AO ZWESLSTC STEP1    STCOPER  OWT  AO
+                                            ZWESLSTC STEP1    STCOPER  OWT  AO ZWESLSTC STEP1    STCOPER  OWT  AO
+                                            ZWESLSTC STEP1    STCOPER  OWT  AO ZWE1AC   STEP1    STCOPER  IN   AO
+                                            ZWE1AD   STEP1    STCOPER  IN   AO ZWE1AG   STEP1    STCOPER  IN   AO
+                                            ZWE1SZ   STEP1    STCOPER  IN   AO ZWE1DS   STEP1    STCOPER  OWT  AO
+                                            ZWE1DS   STEP1    STCOPER  IN   AO SSHD7    *OMVSEX  OMVSKERN OWT  AO
+                                            SSHD9    STEP1    OMVSKERN OWT  AO Z04038   STEP1    Z04038   OWT  AO
+                                            SSHD7    *OMVSEX  OMVSKERN OWT  AO SSHD9    STEP1    OMVSKERN OWT  AO
+                                            Z17997   STEP1    Z17997   OWT  AO Z040385  *OMVSEX  Z04038   OWT  AO
+                                            SSHD2    *OMVSEX  OMVSKERN OWT  AO SSHD4    STEP1    OMVSKERN OWT  AO
+                                            Z23204   STEP1    Z23204   OWT  AO SSHD4    *OMVSEX  OMVSKERN OWT  AO
+                                            SSHD6    STEP1    OMVSKERN OWT  AO Z99996   STEP1    Z99996   OWT  AO
+                                            SSHD9    *OMVSEX  OMVSKERN OWT  AO SSHD2    STEP1    OMVSKERN IN   AO
+                                            Z12309   STEP1    Z12309   IN   AO Z123095  *OMVSEX  Z12309   IN   AO
+                                            Z123096  STEP1    Z12309   IN   AO Z123097  STEP1    Z12309   IN   AO
+                                           Z08778   OWT  O   Z23204   OWT  O   Z17997   OWT  O   Z23502   OWT  O
+                                           Z99996   OWT      Z99996   OWT  O   Z99996   OWT  O   Z23644   OWT  O
+                                           Z17263   OWT  O

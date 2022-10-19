@@ -1,0 +1,14 @@
+S0W1      2022291  02:04:50.43            -D IPLINFO
+S0W1      2022291  02:04:50.43             IEE254I  02.04.50 IPLINFO DISPLAY 286
+                                            SYSTEM IPLED AT 08.51.29 ON 10/17/2022
+                                            RELEASE z/OS 02.04.00    LICENSE = z/OS
+                                            USED LOADW1 IN SYS1.IPLPARM ON 00CE3
+                                            ARCHLVL = 2   MTLSHARE = N
+                                            IEASYM LIST = (W1,SV,VN)
+                                            IEASYS LIST = (00,LV,SV,VN) (OP)
+                                            IODF DEVICE: ORIGINAL(00CE3) CURRENT(00CE3)
+                                            IPL DEVICE: ORIGINAL(01000) CURRENT(01000) VOLUME(VIMVSB)
+                                            VM CPID = z/VM    7.2.0
+                                            VM UUID IS NOT PROVIDED
+                                            VM NAME = DGBGMEM
+                                            VM EXT NAME IS NOT PROVIDED

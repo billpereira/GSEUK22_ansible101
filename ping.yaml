@@ -1,6 +1,6 @@
 ---
-  - hosts: zxplore
-    gather_facts: no
-    tasks:
-      - name: Testing connection with zxplore
-        ansible.builtin.ping:
+- hosts: zxplore
+  gather_facts: no
+  tasks:
+    - name: Testing connection with zxplore
+      ansible.builtin.ping:

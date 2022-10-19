@@ -1,4 +1,7 @@
-zxplore_user=$1
+# zxplore_user=$1
+
+echo -n MF USERID: 
+read -s zxplore_user
 
 echo -n Password: 
 read -s password
@@ -7,7 +10,7 @@ python --version
 
 pip --version
 
-sudo apt-get install ansible -y
+# sudo apt-get install ansible -y
 
 echo 'all:' >> inventory.yaml
 echo '  hosts:' >> inventory.yaml
@@ -35,7 +38,13 @@ echo '        LANG: "C"' >> inventory.yaml
 sudo apt-get install sshpass -y
 
 pip install ansible
+pip install "ansible-lint"
 
-ansible --version
+
+code --install-extension Zowe.vscode-extension-for-zowe
+code --install-extension oderwat.indent-rainbow
+code --install-extension redhat.ansible
+
+# ansible --version
 
 exit
