@@ -1,0 +1,19 @@
+---
+- hosts: zxplore
+  gather_facts: no
+  environment: "{{ environment_vars }}"
+  collections:
+    - ibm.ibm_zos_core
+  tasks:
+    - name: Testing connection with zxplore
+      ansible.builtin.ping:
+
+    - name: "Copy from content to file"
+      ibm.ibm_zos_core.zos_copy:
+        content: "Hello World"
+        dest: /z/z12309/hello_from_GSE
+
+    - name: "Copy from content to dataset"
+      ibm.ibm_zos_core.zos_copy:
+        content: "Hello World"
+        dest: Z12309.ANSB.HELLO.GSE

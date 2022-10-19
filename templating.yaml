@@ -1,0 +1,29 @@
+---
+- name: Creating a job from template and submitting it
+  hosts: zxplore
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+  collections:
+    - ibm.ibm_zos_core
+  vars:
+    dsname: "Z12309.ANSB.DSN1"
+  tasks:
+    - name: Prepare our job
+      ansible.builtin.template:
+        src: job14-2.j2
+        dest: ./job14.jcl
+      vars:
+        datasets_to_be_allocated:
+          - ddname: REXX
+            dsname: Z12309.ANSB.REXX
+          - ddname: COBOL
+            dsname: Z12309.ANSB.COBOL
+      delegate_to: localhost
+
+    - name: Submit job create
+      ibm.ibm_zos_core.zos_job_submit:
+        src: ./job14.jcl
+        location: LOCAL
+        wait: true
+        return_output: true
+        max_rc: 0

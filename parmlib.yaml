@@ -1,0 +1,23 @@
+---
+- name: Creating a copy of parmlib member
+  hosts: zxplore
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+  collections:
+    - ibm.ibm_zos_core
+  vars:
+    src_library: "LVL0.PARMLIB"
+    target_library: "Z12309.ANSB.PARMLIB"
+    member: "IEASYS00"
+  tasks:
+    - name: "Allocate our parmlib copy dataset"
+      ibm.ibm_zos_core.zos_data_set:
+        name: "{{ target_library }}"
+        type: PDS
+        state: present
+
+    - name: "COPY IEASYS00"
+      ibm.ibm_zos_core.zos_copy:
+        src: "{{ src_library }}({{ member }})"
+        dest: "{{ target_library }}({{ member }})"
+        remote_src: true

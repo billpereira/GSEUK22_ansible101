@@ -1,0 +1,32 @@
+---
+- name: Erasing files created
+  hosts: zxplorer
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+  collections:
+    - ibm.ibm_zos_core
+  tasks:
+    - name: "Erase dsns created during the practice"
+      ibm.ibm_zos_core.zos_data_set:
+        name: "{{ item }}"
+        state: absent
+      loop:
+        - "{{ ansible_user }}.ANSB.JCL"
+        - "{{ ansible_user }}.ANSB.REXX"
+        - "{{ ansible_user }}.ANSB.COBOL"
+        - "{{ ansible_user }}.ANSB.PARMLIB"
+        - "{{ ansible_user }}.ANSB.DSN1"
+        - "{{ ansible_user }}.ANSB.HELLO"
+
+    - name: Erase files
+      ansible.builtin.file:
+        path: /z/{{ ansible_user }}/hello_from_GSE
+        state: absent
+
+    - name: Erase local files
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: absent
+      delegate_to: localhost
+      loop:
+        - ./job14.jcl

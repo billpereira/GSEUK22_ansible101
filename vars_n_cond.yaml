@@ -1,0 +1,23 @@
+---
+- name: Creating a copy of parmlib member
+  hosts: zxplore
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+  collections:
+    - ibm.ibm_zos_core
+  vars:
+    src_library: "LVL0.PARMLIB"
+    target_library: "Z12309.ANSB.PARMLIB"
+    member: "IEASYS00"
+  tasks:
+    - name: Getting content of iplinfo file
+      ansible.builtin.set_fact:
+        iplinfo: "{{ lookup('file', 'iplinfo') }}"
+
+    - name: Find IPL Address
+      ansible.builtin.set_fact:
+        ipladdress: "{{ iplinfo | regex_findall('(IPL DEVICE: ORIGINAL\\()(.*?)\\)') }}"
+
+    - name: Displaying var
+      ansible.builtin.debug:
+        msg: "The last IPL was on address {{ ipladdress[0][1] }}"

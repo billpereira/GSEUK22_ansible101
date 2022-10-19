@@ -1,0 +1,30 @@
+---
+- name: Creating a copy of parmlib member
+  hosts: zxplore
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+  collections:
+    - ibm.ibm_zos_core
+  tasks:
+    - name: Setting variables
+      ansible.builtin.set_fact:
+        active_tasks: "{{ lookup('file', 'active_tasks') }}"
+        task_to_search: ZWE##1AC
+
+    - name: Submitting maintenance jobs
+      ibm.ibm_zos_core.zos_job_submit:
+        src: "{{ item.dsn }}({{ item.member }})"
+        location: DATA_SET
+        wait: true
+        return_output: true
+        max_rc: 0
+      loop:
+        - dsn: Z12309.ANSB.JCL
+          member: JOB1
+        - dsn: Z12309.ANSB.JCL
+          member: JOB2
+      when: task_to_search not in active_tasks
+      register: submitted_jobs
+
+    - ansible.builtin.debug:
+        var: submitted_jobs
