@@ -188,7 +188,7 @@ zxplore                    : ok=1    changed=0    unreachable=0    failed=0    s
 So let's explore the first z/OS module, adding our ibm_core_zos collections and playing with zos_copy:
 https://ibm.github.io/z_ansible_collections_doc/ibm_zos_core/docs/source/modules/zos_copy.html
 
-0- Install the zOS Collection with `ansible-galaxy collection install ibm.ibm_zos_core`
+0- Install the zOS Collection with `ansible-galaxy collection install ibm.ibm_zos_core:*`
 
 ```
 ➜ ansible-galaxy collection install ibm.ibm_zos_core
