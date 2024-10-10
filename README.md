@@ -26,7 +26,7 @@ https://docs.ansible.com/ansible-core/2.12/index.html
 
 ## Getting started with our environment
 
-To avoid any local installation, we will use the GitPod IDE for our practices: https://gitpot.io
+To avoid any local installation, we will use the GitPod IDE for our practices: https://gitpod.io
 
 Let's use our github account to connect and create the workspace using this repository as base.
 
